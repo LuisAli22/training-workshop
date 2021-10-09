@@ -1,9 +1,11 @@
 package ar.com.learsoft.training.state;
 
-public class WordCounterState extends PhraseAnalyzerState{
+import ar.com.learsoft.training.utils.Definitions;
 
+public class WordCounterState extends PhraseAnalyzerState{
 	@Override
 	public void printCount(String phrase) {
+		this.currentCount=Definitions.INITIAL_COUNT;
 		System.out.println("Contando palabras!!!");
 	}
 
