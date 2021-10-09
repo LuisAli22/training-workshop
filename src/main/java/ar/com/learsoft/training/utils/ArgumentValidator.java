@@ -9,6 +9,8 @@ public class ArgumentValidator {
 
 	public ArgumentValidator(String[] args) {
 		this.args = Arrays.asList(args);
+	}
+	public void validate() {
 		if (badArgAmount()){
             throw new IllegalArgumentException("Debe ingresar la frase en 1 segmento indicado entre comillas");
         }

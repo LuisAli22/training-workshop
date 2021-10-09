@@ -7,8 +7,9 @@ public class App
     public static void main( String[] args ){
         try {
         	ArgumentValidator argumentValidator= new ArgumentValidator(args);
+        	argumentValidator.validate();
+        	String phrase= argumentValidator.getPhrase();
 			PhraseAnalyzer phraseAnalyzer= new PhraseAnalyzer();
-			String phrase= argumentValidator.getPhrase();
 			phraseAnalyzer.printCount(phrase);
 			phraseAnalyzer.countConsonants();
 			phraseAnalyzer.printCount(phrase);
