@@ -10,8 +10,20 @@ public class ConsonantCounterState extends PhraseAnalyzerState{
 	@Override
 	public void printCount(String phrase) {
 		this.currentCount=Definitions.INITIAL_COUNT;
-		System.out.println("Contando consonantes!!!");
+		int consonantes = 0;
+		for(int i=0;i <phrase.length(); i++) {
+			char letra = phrase.charAt(i);
+				if(esConsonante(letra)) {
+					consonantes++;
+				}
+			}
+		System.out.println("La cantidad de consonantes es: " + consonantes);
+		}
+		
+		
+	
+	private boolean esConsonante (char letra) {
+		return "bcdfghjklmnñpqrstvwxyz".contains(String.valueOf(letra).toLowerCase());
 		
 	}
-
 }

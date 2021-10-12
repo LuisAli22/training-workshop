@@ -1,5 +1,7 @@
 package ar.com.learsoft.training.state;
 
+import java.util.StringTokenizer;
+
 import ar.com.learsoft.training.utils.Definitions;
 
 public class WordCounterState extends PhraseAnalyzerState{
@@ -10,7 +12,8 @@ public class WordCounterState extends PhraseAnalyzerState{
 	@Override
 	public void printCount(String phrase) {
 		this.currentCount=Definitions.INITIAL_COUNT;
-		System.out.println("Contando palabras!!!");
+		  StringTokenizer st = new StringTokenizer(phrase);
+		  System.out.println("La cantidad de palabras es: " + st.countTokens());
 	}
 
 }

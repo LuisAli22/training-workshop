@@ -10,6 +10,7 @@ public class App {
 	 * stdout dichas cantidades. 
 	 * */
     public static void main( String[] args ){
+
         try {
         	ArgumentValidator argumentValidator= new ArgumentValidator(args);
         	argumentValidator.validate();
